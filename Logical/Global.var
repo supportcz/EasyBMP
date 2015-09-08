@@ -1,0 +1,5 @@
+VAR
+	sourcePicture : STRING[80];
+	convertedPicture : STRING[80];
+	convert : BOOL;
+END_VAR

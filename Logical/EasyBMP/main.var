@@ -1,0 +1,25 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Program: test1
+ * File: test1.var
+ * Author: vancurar
+ * Created: August 20, 2015
+ ********************************************************************
+ * Local variables of program test1
+ ********************************************************************)
+VAR
+	write_buffer : REFERENCE TO USINT;
+	read_buffer : REFERENCE TO USINT;
+	FileWrite_0 : FileWrite;
+	FileDelete_0 : FileDelete;
+	FileCreate_0 : FileCreate;
+	FileClose_0 : FileClose;
+	FileRead_0 : FileRead;
+	FileOpen_0 : FileOpen;
+	fiFILE_INFO_0 : fiFILE_INFO;
+	FileInfo_0 : FileInfo;
+	write_buffer_size : UDINT;
+	write_position : UDINT;
+	read_position : UDINT;
+END_VAR

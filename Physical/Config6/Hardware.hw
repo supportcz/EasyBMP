@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.7.61 SP?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="5PP582.1043-00" Type="5PP582.1043-00" Version="2.0.1.2">
+    <Connector Name="IF3">
+      <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="EthInterfaceRedundant" Value="0" />
+      <Group ID="Vnc1" />
+      <Parameter ID="VncVcObjectName1" Value="Visu" />
+      <Parameter ID="VncKeyMappingFile1" Value="VC\PS2-Keyboard.dis" />
+    </Connector>
+    <Parameter ID="VcObjectName" Value="Visu" />
+    <Parameter ID="KeyMappingFile" Value="VC\5PP582.1043-00.dis" />
+  </Module>
+  <Module Name="5PP5CP_US15_01" Type="5PP5CP.US15-01" Version="2.0.5.0">
+    <Connection Connector="SY" TargetModule="5PP582.1043-00" TargetConnector="SY1" />
+    <Parameter ID="Cyclic1Duration" Value="10000" />
+    <Parameter ID="Cyclic1Tolerance" Value="10000" />
+    <Parameter ID="Cyclic2Duration" Value="20000" />
+    <Parameter ID="Cyclic2Tolerance" Value="20000" />
+    <Parameter ID="Cyclic3Duration" Value="50000" />
+    <Parameter ID="Cyclic3Tolerance" Value="50000" />
+    <Parameter ID="Cyclic4Duration" Value="100000" />
+    <Parameter ID="Cyclic4Tolerance" Value="100000" />
+    <Parameter ID="Cyclic5Duration" Value="200000" />
+    <Parameter ID="Cyclic5Tolerance" Value="200000" />
+    <Parameter ID="Cyclic6Duration" Value="500000" />
+    <Parameter ID="Cyclic6Tolerance" Value="500000" />
+    <Parameter ID="Cyclic7Duration" Value="1000000" />
+    <Parameter ID="Cyclic7Tolerance" Value="1000000" />
+    <Parameter ID="Cyclic8Duration" Value="10000" />
+    <Parameter ID="Cyclic8Tolerance" Value="30000000" />
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="DISK_F" />
+    <Parameter ID="FileDevicePath1" Value="F:\" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="host" />
+    <Parameter ID="FtpUserPassword1" Value="AizmHWR+AuYbKLXzmaOzI6sVe8Xum127HRrk3YVgO2Y=" />
+    <Parameter ID="FtpUserSalt1" Value="djMwWqAI" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
+  </Module>
+</Hardware>

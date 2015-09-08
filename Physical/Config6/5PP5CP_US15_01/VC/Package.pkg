@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.7.61 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Key mapping for 5PP582.1043-00">5PP582.1043-00.dis</Object>
+    <Object Type="File" Description="Key mapping for PS2-Keyboard">PS2-Keyboard.dis</Object>
+  </Objects>
+</Package>

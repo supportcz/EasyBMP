@@ -1,0 +1,20 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Program: loadBitmap
+ * File: loadBitmap.var
+ * Author: Bernecker + Rainer
+ * Created: June 17, 2008
+ ********************************************************************
+ * Local variables of program loadBitmap
+ ********************************************************************)
+VAR
+	state : LibVisapi5_ST_state_type; (*State variables of VISAPI commands*)
+	pBitmap : {REDUND_UNREPLICABLE} UDINT; (*Reference variable of bitmap structure*)
+	handle : UDINT := 0; (*Handle to visualization*)
+	step : INT := 0; (*Step of current paint action*)
+	deviceName : STRING[80]; (*Name of configured file device*)
+	drawBoxPath : STRING[80]; (*Path of DrawBox in Visualization*)
+	useDrawBox : BOOL := FALSE; (*Option variable if you want to paint the picture in a Drawbox or not*)
+	bitmapInfo : {REDUND_UNREPLICABLE} sVCBitmap;
+END_VAR
