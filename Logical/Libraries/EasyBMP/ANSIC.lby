@@ -10,5 +10,6 @@
     <File>EasyBMP_UserManual.pdf</File>
     <File>EasyBMP_VariousBMPutilities.h</File>
     <File>stdio_br.h</File>
+    <File>stdio_br.cpp</File>
   </Files>
 </Library>

@@ -19,7 +19,5 @@ VAR
 	FileOpen_0 : FileOpen;
 	fiFILE_INFO_0 : fiFILE_INFO;
 	FileInfo_0 : FileInfo;
-	write_buffer_size : UDINT;
 	write_position : UDINT;
-	read_position : UDINT;
 END_VAR
