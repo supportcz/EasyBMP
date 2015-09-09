@@ -10,7 +10,7 @@
   <TaskClass Name="Cyclic#7" />
   <TaskClass Name="Cyclic#8">
     <Task Name="loadBitmap" Source="LibVisapi5_ST.loadBitmap.prg" Memory="UserROM" Description="vizualizace" Language="IEC" Debugging="true" />
-    <Task Name="EasyBMP" Source="EasyBMP.prg" Memory="UserROM" Description="free EasyBMP C+ library" Language="ANSIC" Debugging="true" />
+    <Task Name="EasyBMPtas" Source="EasyBMPtask.prg" Memory="UserROM" Description="free EasyBMP C+ library" Language="ANSIC" Debugging="true" />
   </TaskClass>
   <VcDataObjects>
     <VcDataObject Name="Visu" Source="Vizualizace.Visu.dob" Memory="UserROM" Language="Vc" WarningLevel="2" Compress="false" />
@@ -63,5 +63,6 @@
     <LibraryObject Name="vcresman" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="dataobj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsBrStr" Source="Libraries.AsBrStr.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="EasyBMP" Source="Libraries.EasyBMP.lby" Memory="None" Language="ANSIC" Debugging="true" />
   </Libraries>
 </SwConfiguration>

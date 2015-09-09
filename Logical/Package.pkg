@@ -7,6 +7,6 @@
     <Object Type="Package" Description="Global libraries">Libraries</Object>
     <Object Type="Package" Description="An empty package">Vizualizace</Object>
     <Object Type="Package">LibVisapi5_ST</Object>
-    <Object Type="Program" Language="ANSIC" Description="Program">EasyBMP</Object>
+    <Object Type="Program" Language="ANSIC" Description="Program">EasyBMPtask</Object>
   </Objects>
 </Package>

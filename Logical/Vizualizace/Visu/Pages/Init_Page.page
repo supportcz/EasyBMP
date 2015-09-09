@@ -142,7 +142,7 @@
               <Property Name="Locking" Value="Never"/>
               <Property Name="Name" Value="Action_0"/>
               <Property Name="SetValue" Value="1"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.EasyBMP.convert]"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.EasyBMPtask.convert]"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>

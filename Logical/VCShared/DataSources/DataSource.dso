@@ -28,7 +28,17 @@
         </Folder>
       </Folder>
     </Folder>
-    <Folder Name="EasyBMP">
+    <DataPoint Name="convertedPicture">
+      <Property Name="ConnectedBySharedResource" Value="False"/>
+      <Property Name="ConnectingVisus" Value="Vizualizace\Visu"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="PLCType" Value="STRING"/>
+      <Property Name="StringLength" Value="80"/>
+      <Property Name="UpdateTime" Value="Default"/>
+      <Property Name="UserID" Value="None"/>
+      <Property Name="VCType" Value="STRING"/>
+    </DataPoint>
+    <Folder Name="EasyBMPtask">
       <Property Name="Description" Value=""/>
       <Property Name="FolderType" Value="Program"/>
       <DataPoint Name="convert">
@@ -41,15 +51,5 @@
         <Property Name="VCType" Value="BOOL"/>
       </DataPoint>
     </Folder>
-    <DataPoint Name="convertedPicture">
-      <Property Name="ConnectedBySharedResource" Value="False"/>
-      <Property Name="ConnectingVisus" Value="Vizualizace\Visu"/>
-      <Property Name="Description" Value=""/>
-      <Property Name="PLCType" Value="STRING"/>
-      <Property Name="StringLength" Value="80"/>
-      <Property Name="UpdateTime" Value="Default"/>
-      <Property Name="UserID" Value="None"/>
-      <Property Name="VCType" Value="STRING"/>
-    </DataPoint>
   </DataPoints>
 </DataSource>

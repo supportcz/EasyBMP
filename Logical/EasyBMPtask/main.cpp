@@ -16,8 +16,8 @@ unsigned long bur_heap_size=0xFFFFFF;
 	#include <AsDefault.h>
 #endif
 
-#include "EasyBMP.h"
-#include "stdio_br.h"
+#include "..\Libraries\EasyBMP\EasyBMP.h"
+
 
 //using namespace std;
 

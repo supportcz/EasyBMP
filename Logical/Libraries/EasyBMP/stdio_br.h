@@ -9,12 +9,15 @@
 
 #include <bur/plctypes.h>
 #include <stdio.h>
+#include <FileIO.h> 
 
 #define PATH "DISK_F"
 
 FILE *	fopen(const char *_name, const char *_type)
 {
 	if(!strcmp(_type, "rb")) {
+		FileOpen_typ FileOpen_0;
+
 		FileOpen_0.enable = 1;
 		FileOpen_0.pDevice = (UDINT)PATH;
 		FileOpen_0.pFile = (UDINT)_name;
@@ -26,6 +29,7 @@ FILE *	fopen(const char *_name, const char *_type)
 		
 		if (FileOpen_0.status) return NULL;
 	
+		FileInfo_typ FileInfo_0;
 		FileInfo_0.enable = 1;
 		FileInfo_0.pDevice = (UDINT)PATH;
 		FileInfo_0.pName = (UDINT)_name;

@@ -31,6 +31,7 @@
 #include <cmath>
 #include <cctype>
 #include <cstring>
+#include "stdio_br.h"
 
 #ifndef EasyBMP
 #define EasyBMP
