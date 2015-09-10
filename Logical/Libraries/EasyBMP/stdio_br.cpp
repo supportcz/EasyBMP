@@ -57,7 +57,7 @@ FileInfo1 *	fopen(const char *_name, const char *_type)
 		FileInfo1 *fi = new FileInfo1(); 
 		fi->size = fiFILE_INFO_0.size;		
 		fi->ident = FileOpen_0.ident;
-		return (FILE*)fi;		
+		return fi;		
 	}	
 	
 	if(!strcmp(_type, "wb")) {
@@ -84,14 +84,14 @@ FileInfo1 *	fopen(const char *_name, const char *_type)
 		FileInfo1 *fi = new FileInfo1(); 
 		fi->ident = FileCreate_0.ident;
 		fi->writeAccess = 1;
-		return (FILE*)fi;		
+		return fi;		
 	}
 	return 0;
 }
 
 
 
-size_t fread ( void * ptr, size_t size, size_t count, FILE * stream )
+UDINT fread ( void * ptr, size_t size, size_t count, FileInfo1 * stream )
 {
 	FileInfo1 *fi = (FileInfo1 *)stream;
 
@@ -118,7 +118,7 @@ size_t fread ( void * ptr, size_t size, size_t count, FILE * stream )
 	return length;	
 }
 
-int fclose ( FILE * stream )
+int fclose ( FileInfo1 * stream )
 {
 	FileInfo1 *fi = (FileInfo1 *)stream;
 
@@ -152,7 +152,7 @@ int fclose ( FILE * stream )
 }
 
 
-size_t fwrite ( const void * ptr, size_t size, size_t count, FILE * stream )
+UDINT fwrite ( const void * ptr, size_t size, size_t count, FileInfo1 * stream )
 {
 	const int reserve = 1000;
 	FileInfo1 *fi = (FileInfo1 *)stream;	
@@ -179,7 +179,7 @@ size_t fwrite ( const void * ptr, size_t size, size_t count, FILE * stream )
 	return length;	
 }
 
-int feof(FILE *_file)
+int feof(FileInfo1 *_file)
 {
 	FileInfo1 *fi = (FileInfo1 *)_file;
 	
