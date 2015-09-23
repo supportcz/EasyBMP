@@ -9,11 +9,11 @@
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />
   <TaskClass Name="Cyclic#8">
-    <Task Name="loadBitmap" Source="LibVisapi5_ST.loadBitmap.prg" Memory="UserROM" Description="vizualizace" Language="IEC" Debugging="true" />
-    <Task Name="EasyBMPtas" Source="EasyBMPtask.prg" Memory="UserROM" Description="free EasyBMP C+ library" Language="ANSIC" Debugging="true" />
+    <Task Name="sample" Source="sample.prg" Memory="UserROM" Description="EasyBMP library sample" Language="ANSIC" Debugging="true" />
+    <Task Name="visualizat" Source="visu.visualization.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <VcDataObjects>
-    <VcDataObject Name="Visu" Source="Vizualizace.Visu.dob" Memory="UserROM" Language="Vc" WarningLevel="2" Compress="false" />
+    <VcDataObject Name="Visu" Source="visu.Visu.dob" Memory="UserROM" Language="Vc" WarningLevel="2" Compress="false" />
   </VcDataObjects>
   <Binaries>
     <BinaryObject Name="vcmgr" Source="" Memory="UserROM" Language="Binary" />

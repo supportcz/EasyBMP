@@ -25,10 +25,10 @@ FileInfo1::~FileInfo1 ( )
 	buffer = NULL;
 } 
 
-FileInfo1 *	fopen(const char *_name, const char *_type)
+FILE *	fopen(const char *_name, const char *_type)
 {
 	if(!strcmp(_type, "rb")) {
-		FileOpen_typ FileOpen_0;
+		FileOpen_typ FileOpen_0 = {0};
 
 		FileOpen_0.enable = 1;
 		FileOpen_0.pDevice = (UDINT)PATH;
@@ -41,11 +41,11 @@ FileInfo1 *	fopen(const char *_name, const char *_type)
 		
 		if (FileOpen_0.status) return NULL;
 	
-		FileInfo_typ FileInfo_0;
+		FileInfo_typ FileInfo_0 = {0};
 		FileInfo_0.enable = 1;
 		FileInfo_0.pDevice = (UDINT)PATH;
 		FileInfo_0.pName = (UDINT)_name;
-		fiFILE_INFO fiFILE_INFO_0;
+		fiFILE_INFO fiFILE_INFO_0 = {0};
 		FileInfo_0.pInfo = (UDINT)&fiFILE_INFO_0;
 		
 		do {
@@ -57,12 +57,12 @@ FileInfo1 *	fopen(const char *_name, const char *_type)
 		FileInfo1 *fi = new FileInfo1(); 
 		fi->size = fiFILE_INFO_0.size;		
 		fi->ident = FileOpen_0.ident;
-		return fi;		
+		return (FILE*)fi;		
 	}	
 	
 	if(!strcmp(_type, "wb")) {
 		//try to delete the file
-		FileDelete_typ FileDelete_0;
+		FileDelete_typ FileDelete_0 = {0};
 		FileDelete_0.enable = 1;
 		FileDelete_0.pDevice = (UDINT)PATH;
 		FileDelete_0.pName = (UDINT)_name;
@@ -71,7 +71,7 @@ FileInfo1 *	fopen(const char *_name, const char *_type)
 		}while (FileDelete_0.status == 65535);
 		
 		//create the file
-		FileCreate_typ FileCreate_0;
+		FileCreate_typ FileCreate_0 = {0};
 		FileCreate_0.enable = 1;
 		FileCreate_0.pDevice = (UDINT)PATH;
 		FileCreate_0.pFile = (UDINT)_name;
@@ -84,21 +84,21 @@ FileInfo1 *	fopen(const char *_name, const char *_type)
 		FileInfo1 *fi = new FileInfo1(); 
 		fi->ident = FileCreate_0.ident;
 		fi->writeAccess = 1;
-		return fi;		
+		return (FILE*)fi;		
 	}
 	return 0;
 }
 
 
 
-UDINT fread ( void * ptr, size_t size, size_t count, FileInfo1 * stream )
+size_t fread ( void * ptr, size_t size, size_t count, FILE * stream )
 {
 	FileInfo1 *fi = (FileInfo1 *)stream;
 
 	if (fi->position == 0) {
 		fi->buffer = new USINT[fi->size];
 		
-			FileRead_typ FileRead_0;
+		FileRead_typ FileRead_0 = {0};
 		FileRead_0.enable = 1;
 		FileRead_0.ident = fi->ident;
 		FileRead_0.offset = 0;
@@ -118,14 +118,14 @@ UDINT fread ( void * ptr, size_t size, size_t count, FileInfo1 * stream )
 	return length;	
 }
 
-int fclose ( FileInfo1 * stream )
+int fclose ( FILE * stream )
 {
 	FileInfo1 *fi = (FileInfo1 *)stream;
 
 	if (fi->writeAccess) {
 		//data written
 		if (fi->position > 0) {
-			FileWrite_typ FileWrite_0;
+			FileWrite_typ FileWrite_0 = {0};
 			FileWrite_0.enable = 1;
 			FileWrite_0.ident = fi->ident;
 			FileWrite_0.offset = 0;
@@ -140,7 +140,7 @@ int fclose ( FileInfo1 * stream )
 		}
 	}		
 	
-	FileClose_typ FileClose_0;
+	FileClose_typ FileClose_0 = {0};
 	FileClose_0.enable = 1;
 	FileClose_0.ident = fi->ident;
 	
@@ -152,7 +152,7 @@ int fclose ( FileInfo1 * stream )
 }
 
 
-UDINT fwrite ( const void * ptr, size_t size, size_t count, FileInfo1 * stream )
+size_t fwrite ( const void * ptr, size_t size, size_t count, FILE * stream )
 {
 	const int reserve = 1000;
 	FileInfo1 *fi = (FileInfo1 *)stream;	
@@ -179,13 +179,4 @@ UDINT fwrite ( const void * ptr, size_t size, size_t count, FileInfo1 * stream )
 	return length;	
 }
 
-int feof(FileInfo1 *_file)
-{
-	FileInfo1 *fi = (FileInfo1 *)_file;
-	
-	if (fi->position < fi->size)
-		return 0;
-	else
-		return 1;
-}
 

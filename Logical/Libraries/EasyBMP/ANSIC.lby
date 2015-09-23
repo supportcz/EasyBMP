@@ -2,8 +2,8 @@
 <?AutomationStudio Version=4.1.7.61 SP?>
 <Library Type="AnsiC" xmlns="http://br-automation.co.at/AS/Library">
   <Files>
-    <File>EasyBMP.cpp</File>
     <File>EasyBMP.h</File>
+    <File>EasyBMP.cpp</File>
     <File>EasyBMP_BMP.h</File>
     <File>EasyBMP_DataStructures.h</File>
     <File>EasyBMP_ChangeLog.txt</File>

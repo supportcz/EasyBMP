@@ -88,7 +88,7 @@
           <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Output]"/>
           <Property Name="TeachDatapoint" Value="None"/>
           <Property Name="Top" Value="22"/>
-          <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.LibVisapi5_ST.loadBitmap.state.va_loadbitmap]"/>
+          <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.visu.visualization.state.va_loadbitmap]"/>
           <Property Name="ValueMode" Value="Standard"/>
           <Property Name="Width" Value="86"/>
         </Control>
@@ -142,7 +142,7 @@
               <Property Name="Locking" Value="Never"/>
               <Property Name="Name" Value="Action_0"/>
               <Property Name="SetValue" Value="1"/>
-              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.EasyBMPtask.convert]"/>
+              <Property Name="ValueDatapoint" Value="Source[global].Variable[DataSource.sample.convert]"/>
             </KeyAction>
           </KeyActions>
         </VirtualKey>

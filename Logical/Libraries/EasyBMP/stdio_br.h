@@ -11,7 +11,7 @@
 #define STDIO_BR
 
 #include <bur/plctypes.h>
-//#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 #include <FileIO.h> 
 
@@ -30,5 +30,6 @@ class FileInfo1
 	bool writeAccess;
 };
 
+#define feof(p) ((((FileInfo1*)p)->position < ((FileInfo1*)p)->size) ? false:true)
 
 #endif

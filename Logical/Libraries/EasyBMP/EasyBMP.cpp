@@ -995,7 +995,7 @@ bool BMP::ReadFromFile( const char* FileName )
    // read the three bit masks
 
    ebmpWORD TempMaskWORD;
-  // ebmpWORD ZeroWORD;
+   ebmpWORD ZeroWORD;
   
    SafeFread( (char*) &RedMask , 2 , 1 , fp );
    if( IsBigEndian() )
@@ -1263,7 +1263,6 @@ bool SafeFread( char* buffer, int size, int number, FILE* fp )
 {
  using namespace std;
  int ItemsRead;
-	
  if( feof(fp) )
  { return false; }
  ItemsRead = (int) fread( buffer , size , number , fp );

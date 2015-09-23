@@ -5,8 +5,7 @@
     <Object Type="File" Description="Global data types">Global.typ</Object>
     <Object Type="File" Description="Global variables">Global.var</Object>
     <Object Type="Package" Description="Global libraries">Libraries</Object>
-    <Object Type="Package" Description="An empty package">Vizualizace</Object>
-    <Object Type="Package">LibVisapi5_ST</Object>
-    <Object Type="Program" Language="ANSIC" Description="Program">EasyBMPtask</Object>
+    <Object Type="Package" Description="vizualization">visu</Object>
+    <Object Type="Program" Language="ANSIC" Description="sample task">sample</Object>
   </Objects>
 </Package>

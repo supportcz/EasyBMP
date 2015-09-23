@@ -7,10 +7,20 @@
   <Property Name="IsIntern" Value="False"/>
   <Property Name="TextGroup" Value="None"/>
   <DataPoints>
-    <Folder Name="LibVisapi5_ST">
+    <DataPoint Name="convertedPicture">
+      <Property Name="ConnectedBySharedResource" Value="False"/>
+      <Property Name="ConnectingVisus" Value="visu\Visu"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="PLCType" Value="STRING"/>
+      <Property Name="StringLength" Value="80"/>
+      <Property Name="UpdateTime" Value="Default"/>
+      <Property Name="UserID" Value="None"/>
+      <Property Name="VCType" Value="STRING"/>
+    </DataPoint>
+    <Folder Name="visu">
       <Property Name="Description" Value=""/>
       <Property Name="FolderType" Value="Package"/>
-      <Folder Name="loadBitmap">
+      <Folder Name="visualization">
         <Property Name="Description" Value=""/>
         <Property Name="FolderType" Value="Program"/>
         <Folder Name="state">
@@ -18,7 +28,7 @@
           <Property Name="FolderType" Value="Struct"/>
           <DataPoint Name="va_loadbitmap">
             <Property Name="ConnectedBySharedResource" Value="False"/>
-            <Property Name="ConnectingVisus" Value="Vizualizace\Visu"/>
+            <Property Name="ConnectingVisus" Value="visu\Visu"/>
             <Property Name="Description" Value=""/>
             <Property Name="PLCType" Value="UINT"/>
             <Property Name="UpdateTime" Value="Default"/>
@@ -28,22 +38,12 @@
         </Folder>
       </Folder>
     </Folder>
-    <DataPoint Name="convertedPicture">
-      <Property Name="ConnectedBySharedResource" Value="False"/>
-      <Property Name="ConnectingVisus" Value="Vizualizace\Visu"/>
-      <Property Name="Description" Value=""/>
-      <Property Name="PLCType" Value="STRING"/>
-      <Property Name="StringLength" Value="80"/>
-      <Property Name="UpdateTime" Value="Default"/>
-      <Property Name="UserID" Value="None"/>
-      <Property Name="VCType" Value="STRING"/>
-    </DataPoint>
-    <Folder Name="EasyBMPtask">
+    <Folder Name="sample">
       <Property Name="Description" Value=""/>
       <Property Name="FolderType" Value="Program"/>
       <DataPoint Name="convert">
         <Property Name="ConnectedBySharedResource" Value="False"/>
-        <Property Name="ConnectingVisus" Value="Vizualizace\Visu"/>
+        <Property Name="ConnectingVisus" Value="visu\Visu"/>
         <Property Name="Description" Value=""/>
         <Property Name="PLCType" Value="BOOL"/>
         <Property Name="UpdateTime" Value="Default"/>
